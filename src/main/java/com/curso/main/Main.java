@@ -10,7 +10,8 @@ public class Main {
 	 
 	 
 	public static void main(String[] args) {
-
+		
+		int elegirOpcion=0;
 		ArrayList<Refresco> maquina = new ArrayList<Refresco>();
 		maquina.add(new Refresco("Fanta Limon", 210, 10));
 		maquina.add(new Refresco("Agua", 100, 10));
@@ -22,14 +23,17 @@ public class Main {
 		maquina.add(new Refresco("Redbull", 200, 10));
 		maquina.add(new Refresco("Cafe con leche", 130, 10));
 		maquina.add(new Refresco("Nestea", 190, 10));
-
-		desplegarOpciones(maquina);
+				
+		//AQUI ME FALLA EL PRECIO
+	            System.out.println("Seleccione una opcion: ");
+	            System.out.println("1. Ver precio.");
+	            System.out.println("2. Comprar.");
+                System.out.println("3. Ver recaudacion.");
+                System.out.println("4. Salir");
+             
+	            elegirOpcion = teclado.nextInt();
 		
-		
-		}
-	public static void desplegarOpciones(ArrayList<Refresco> maquina) {}
-		/*
-	switch () {
+	switch (elegirOpcion) {
 	case 1:
 		comprobarPrecio(maquina); // getPrecio
 		break;
@@ -38,14 +42,13 @@ public class Main {
 								// restarStock y añadir/quitar cambios a maquina
 		break;
 	case 3: 
-	
+		obtenerRecaudacion(maquina);
 		break;
 	case 4:
 		System.exit(0);
 		break;
 	}
 	}
-*/
 	public static void mostrar(ArrayList<Refresco> maquina) {
 
 		Iterator<Refresco> ref = maquina.iterator();
@@ -137,7 +140,11 @@ public static void mirarMonedas(ArrayList<Refresco> maquina) {
         }
     }
 
-
+	public static void obtenerRecaudacion(ArrayList<Refresco> maquina) {
+		
+		
+		
+	}
 
 
 	public static double comprobarPrecio(ArrayList<Refresco> maquina) {
